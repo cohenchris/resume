@@ -34,7 +34,7 @@
 
 % left column width
 \newlength{\cvleftcolumnwidth}
-\setlength{\cvleftcolumnwidth}{44.5mm}
+\setlength{\cvleftcolumnwidth}{40mm}
 
 % right column width
 \newlength{\cvrightcolumnwidth}
@@ -90,7 +90,7 @@
 
 % vertical space after personal info and standard CV items
 \newlength{\cvafteritemskipamount}
-\setlength{\cvafteritemskipamount}{5mm plus 1.25mm minus 1.25mm}
+\setlength{\cvafteritemskipamount}{2mm plus 1.25mm minus 1.25mm}
 
 % vertical space after sections
 \newlength{\cvaftersectionskipamount}
@@ -111,7 +111,7 @@
 
 % vertical space after personal info lines
 \newlength{\cvafterpersonalinfolineskipamount}
-\setlength{\cvafterpersonalinfolineskipamount}{2mm plus 0.5mm minus 0.5mm}
+\setlength{\cvafterpersonalinfolineskipamount}{1mm plus 0.5mm minus 0.5mm}
 
 % vertical space after titles
 \newlength{\cvaftertitleskipamount}
@@ -238,7 +238,7 @@
 
 \cvpersonalinfo{
     % photo
-    \includegraphics[height=47mm]{img/me.png}
+    \includegraphics[height=40mm]{img/me.png}
 }{
     % name
     \cvname{Chris Cohen}
@@ -277,11 +277,11 @@
 % education
 % ---------
 
-\cvsection{EDUCATION}
+\cvsection{\large EDUCATION}
 
 % bachelor's
 \cvitem{
-    \cvdurationstyle{August 2017 -- Present}
+    \cvdurationstyle{Aug. 2017 -- Present}
 }{
     \cvtitle{Bachelor of Science (Software Engineering and Cybersecurity)}
 
@@ -298,7 +298,7 @@
 % work experience
 % ---------------
 
-\cvsection{WORK EXPERIENCE}
+\cvsection{\large WORK EXPERIENCE}
 
 % Qualcomm
 \cvitem{
@@ -315,7 +315,7 @@
 
 % NSWC Crane
 \cvitem{
-    \cvdurationstyle{May 2019 -- August 2019}
+    \cvdurationstyle{May 2019 -- Aug. 2019}
 }{
     \cvtitle{Software Engineering Intern}
 
@@ -331,7 +331,7 @@ natural language processing algorithm to process failure databases.
 % skills
 % ------
 
-\cvsection{TECHNICAL SKILLS}
+\cvsection{\large TECHNICAL SKILLS}
 
 % programming languages
 \cvitem{
@@ -341,44 +341,38 @@ natural language processing algorithm to process failure databases.
 }
 
 % classes
-\cvitem{
-    \cvheadingstyle{Notable Classes Taken}
-}{
-      \begin{center}
-      Computer Architecture \hspace{10mm}
-      Data Structures and Algorithms \hspace{10mm}
-      Systems Programming
-
-      Operating Systems (with XINU OS) \hspace{10mm}
-      Computer Networks \hspace{10mm}
-      \end{center}
-}
+%\cvitem{
+%    \cvheadingstyle{Notable Classes Taken}
+%}{
+%      \begin{center}
+%      Computer Architecture \hspace{10mm}
+%      Data Structures and Algorithms \hspace{10mm}
+%      Systems Programming
+%
+%      Operating Systems (with XINU OS) \hspace{10mm}
+%      Computer Networks \hspace{10mm}
+%      \end{center}
+%}
 
 % topics
 \cvitem{
     \cvheadingstyle{Relevant Knowledge}
 }{
     \begin{itemize}[leftmargin=*]
-      \item Systems Programming
-        \subitem - Inter-Process Communication
-        \subitem - Concurrency and Parallelism (Semaphores, Locks, Forking, Threading)
+      \item MEMORY MANAGEMENT
+        \subitem - Paging, Virtualization, and Cache Memory Hierarchy
+        \subitem - Runtime Stack and Heap Management
 
-      \item Memory Management
-        \subitem - Paging and Virtualization
-        \subitem - Cache Memory Hierarchy
-        \subitem - Stack and Heap Management
+      \item OS AND SYSTEMS PROGRAMMING
+        \subitem - Software/Hardware Interrupts and Device Management
+        \subitem - Asynchronous Inter-Process Communication
+        \subitem - Return-Oriented Programming
+        \subitem - Concurrency and Parallelism (Semaphores, Locks, Forking, Threading, Scheduling)
 
-
-      \item Operating Systems
-        \subitem - Process Scheduling and Synchronization
-        \subitem - Software/Hardware Interrupts and Device Management with DMA
-        \subitem - System Call Conventions (with hadware and software support)
-        \subitem - Asynchronous IPC (specifically callback function handling)
-
-      \item OSI/ISO Model
+      \item OSI/ISO 7-LAYER NETWORK MODEL
         \subitem - UDP, TCP, methods for reliable data transport
         \subitem - IP addressing/routing, DHCP, and DNS translation
-        \subitem - ARP, MAC Addressing, Multiple-access protocols for link-layer
+        \subitem - ARP, MAC addressing/routing, Multiple-access protocols for link-layer
         \subitem - Basic cryptography and security approaches
       \end{itemize}
 }
@@ -386,7 +380,7 @@ natural language processing algorithm to process failure databases.
 % education
 % ---------
 
-\cvsection{PROJECTS}
+\cvsection{\large PROJECTS}
 
 % Honeypot
 \cvitem{
@@ -395,7 +389,10 @@ natural language processing algorithm to process failure databases.
   \cvtitle{Web Server Honeypot (Extracurricular)}
 
     \begin{itemize}[leftmargin=*]
-        \item 
+        \item Hosted an HTTPS Honeypot Server to lure attackers and collect information
+        \item Graphical directory browsing and support for 14 HTTP response codes
+        \item Automatic blacklisting for clients who send too many requests too quickly
+        \item Analyzed logs and learned about different types of attacks on web servers
     \end{itemize}
 }
 
@@ -403,20 +400,25 @@ natural language processing algorithm to process failure databases.
 \cvitem{
     \cvdurationstyle{March 2020}
 }{
-    \cvtitle{Process Hijacking}
+    \cvtitle{Operating Systems - Process Hijacking in XINU}
 
     \begin{itemize}[leftmargin=*]
-        \item 
+        \item Manipulated a victim process by locating and modifying return addresses and local variables in the runtime stack
+        \item Learned about protection against this sort of attack (stack canaries)
+        \item Studied how x86 interrupts, system calls, and function calls affect the runtime stack
     \end{itemize}
 }
 
 \cvitem{
-    \cvdurationstyle{September 2019 - October 2019}
+    \cvdurationstyle{Sept. 2019 - Oct. 2019}
 }{
-    \cvtitle{Shell}
+    \cvtitle{Systems Programming - Shell Interpreter in C}
 
     \begin{itemize}[leftmargin=*]
-        \item 
+        \item Parsing and execution of commands
+        \item File Redirection and Piping
+        \item Signal Handling and Inter-process communication
+        \item Forking subshell execution
     \end{itemize}
 }
 
