@@ -20,7 +20,12 @@
 \usepackage{graphicx}       % for pictures
 \usepackage{microtype}      % for microtypography stuff
 \usepackage{xcolor}         % for colours
+\usepackage{hyperref}       % for document links
 
+
+\hypersetup {
+    colorlinks=false,
+}
 
 % margin and column widths
 % ------------------------
@@ -34,7 +39,7 @@
 
 % left column width
 \newlength{\cvleftcolumnwidth}
-\setlength{\cvleftcolumnwidth}{40mm}
+\setlength{\cvleftcolumnwidth}{45mm}
 
 % right column width
 \newlength{\cvrightcolumnwidth}
@@ -59,10 +64,14 @@
 \defaultfontfeatures{Ligatures=TeX} % reportedly a good idea, see https://tex.stackexchange.com/a/37251
 
 \newfontfamily{\cvnamefont}[Path=./Roboto/]{Roboto-Medium}
-\newfontfamily{\cvsectionfont}[Path=./Roboto/]{Roboto-Medium}
+\newfontfamily{\cvsectionfont}[Path=./Roboto/]{Roboto-Light}
 \newfontfamily{\cvtitlefont}[Path=./Roboto/]{Roboto-Regular}
 \newfontfamily{\cvdurationfont}[Path=./Roboto/]{Roboto-LightItalic}
 \newfontfamily{\cvheadingfont}[Path=./Roboto/]{Roboto-Regular}
+
+\newfontfamily{\regularfont}[Path=./Roboto/]{Roboto-Regular}
+\newfontfamily{\italicfont}[Path=./Roboto/]{Roboto-Italic}
+
 \setmainfont[Path=./Roboto/]{Roboto-Light}
 
 
@@ -83,6 +92,10 @@
 \newcommand{\cvtitlestyle}[1]{{\large\cvtitlefont\textcolor{cvtitlecolor}{#1}}}
 \newcommand{\cvdurationstyle}[1]{{\small\cvdurationfont\textcolor{cvdurationcolor}{#1}}}
 \newcommand{\cvheadingstyle}[1]{{\normalsize\cvheadingfont\textcolor{cvheadingcolor}{#1}}}
+
+\newcommand{\italicstyle}[1]{{\small\italicfont\textcolor{cvsectioncolor}{#1}}}
+\newcommand{\regularstyle}[1]{{\normalsize\regularfont\textcolor{cvsectioncolor}{#1}}}
+
 
 
 % inter-item spacing
@@ -255,29 +268,29 @@
 
     % email address
     \cvpersonalinfolinewithicon{height=4mm}{img/email.png}{
-      chriscohen@chriscohen.dev
+      \href{mailto:chriscohen@chriscohen.dev}{chriscohen@chriscohen.dev}
     }
 
     % LinkedIn account
     \cvpersonalinfolinewithicon{height=4mm}{img/linkedin.png}{
-      https://www.linkedin.com/in/chris-cohen-purdue/
+      \href{https://www.linkedin.com/in/chris-cohen-purdue/}{https://www.linkedin.com/in/chris-cohen-purdue/}
     }
 
     % Website
     \cvpersonalinfolinewithicon{height=4mm}{img/website.png}{
-      https://www.chriscohen.dev
+      \href{https://www.chriscohen.dev}{https://www.chriscohen.dev}
     }
 
     % GitHub
     \cvpersonalinfolinewithicon{height=4mm}{img/github.png}{
-      https://github.com/cohenchris
+      \href{https://github.com/cohenchris}{https://github.com/cohenchris}
     }
 }
 
 % education
 % ---------
 
-\cvsection{\large EDUCATION}
+\cvsection{\LARGE EDUCATION}
 
 % bachelor's
 \cvitem{
@@ -285,42 +298,44 @@
 }{
     \cvtitle{Bachelor of Science (Software Engineering and Cybersecurity)}
 
-    \large
-    Purdue University in West Lafayette, IN
+    \italicstyle{Purdue University}
 
-    \normalsize
     \begin{itemize}[leftmargin=*]
         \item 3.83 GPA
-        \item 6x Dean's List \hspace{10mm} 5x Semester Honors
+        \item 6x Dean's List, 5x Semester Honors
     \end{itemize}
 }
 
 % work experience
 % ---------------
 
-\cvsection{\large WORK EXPERIENCE}
+\cvsection{\LARGE EMPLOYMENT}
 
 % Qualcomm
 \cvitem{
     \cvdurationstyle{May 2020 -- Present}
 }{
-    \cvtitle{Embedded Software Engineering Intern}
+    \cvtitle{Qualcomm, QGOV Division}
 
-    Qualcomm, QGOV Division
+    \italicstyle{Embedded Software Engineering Intern}
 
+    \normalsize
     \begin{itemize}[leftmargin=*]
         \item TBD
     \end{itemize}
+    \vspace{2mm}
 }
 
 % NSWC Crane
 \cvitem{
     \cvdurationstyle{May 2019 -- Aug. 2019}
 }{
-    \cvtitle{Software Engineering Intern}
 
-    Naval Surface Warface Center, Crane Division
+    \cvtitle{Naval Surface Warface Center, Crane Division}
 
+    \italicstyle{Software Engineering Intern}
+
+    \normalsize
     \begin{itemize}[leftmargin=*]
         \item Improved US Navy missile sustainment efforts by upgrading an existing
 natural language processing algorithm to process failure databases.
@@ -331,56 +346,55 @@ natural language processing algorithm to process failure databases.
 % skills
 % ------
 
-\cvsection{\large TECHNICAL SKILLS}
+\cvsection{\LARGE EXPERTISE}
 
 % programming languages
 \cvitem{
-    \cvheadingstyle{Programming Languages}
+    \cvheadingstyle{Languages}
 }{
-      C \hspace{12mm} C++ \hspace{12mm} Python \hspace{12mm} ARM/x86 Assembly \hspace{12mm} Bash \hspace{12mm} Javascript
+  C \hspace{12mm} C++ \hspace{12mm} Python \hspace{12mm} ARM/x86 Assembly \hspace{12mm} Bash \hspace{12mm} Javascript
+  \vspace{2mm}
 }
-
-% classes
-%\cvitem{
-%    \cvheadingstyle{Notable Classes Taken}
-%}{
-%      \begin{center}
-%      Computer Architecture \hspace{10mm}
-%      Data Structures and Algorithms \hspace{10mm}
-%      Systems Programming
-%
-%      Operating Systems (with XINU OS) \hspace{10mm}
-%      Computer Networks \hspace{10mm}
-%      \end{center}
-%}
 
 % topics
 \cvitem{
-    \cvheadingstyle{Relevant Knowledge}
+    \cvheadingstyle{Memory Management}
 }{
     \begin{itemize}[leftmargin=*]
-      \item MEMORY MANAGEMENT
-        \subitem - Paging, Virtualization, and Cache Memory Hierarchy
-        \subitem - Runtime Stack and Heap Management
+      \item Paging, Virtualization
+      \item Cache Memory Hierarchy
+      \item Stack and Heap Management for ARM/x86
+    \end{itemize}
+  \vspace{3mm}
+}
 
-      \item OS AND SYSTEMS PROGRAMMING
-        \subitem - Software/Hardware Interrupts and Device Management
-        \subitem - Asynchronous Inter-Process Communication
-        \subitem - Return-Oriented Programming
-        \subitem - Concurrency and Parallelism (Semaphores, Locks, Forking, Threading, Scheduling)
+\cvitem{
+    \cvheadingstyle{OS and Systems Programming}
+}{
+    \begin{itemize}[leftmargin=*]
+      \item Software/Hardware Interrupts and Device Management
+      \item Asynchronous Inter-Process Communication
+      \item Return-Oriented Programming
+      \item Concurrency and Parallelism (Semaphores, Locks, Forking, Threading, Scheduling)
+    \end{itemize}
+  \vspace{3mm}
+}
 
-      \item OSI/ISO 7-LAYER NETWORK MODEL
-        \subitem - UDP, TCP, methods for reliable data transport
-        \subitem - IP addressing/routing, DHCP, and DNS translation
-        \subitem - ARP, MAC addressing/routing, Multiple-access protocols for link-layer
-        \subitem - Basic cryptography and security approaches
-      \end{itemize}
+\cvitem{
+    \cvheadingstyle{OSI/ISO 7-Layer Model}
+}{
+    \begin{itemize}[leftmargin=*]
+      \item TCP, UDP, HTTP
+      \item IP addressing/routing, DHCP, DNS translation
+      \item MAC addressing/routing, ARP
+      \item Basic cryptography and security approaches
+    \end{itemize}
 }
 
 % education
 % ---------
 
-\cvsection{\large PROJECTS}
+\cvsection{\LARGE PROJECTS}
 
 % Honeypot
 \cvitem{
@@ -394,31 +408,33 @@ natural language processing algorithm to process failure databases.
         \item Automatic blacklisting for clients who send too many requests too quickly
         \item Analyzed logs and learned about different types of attacks on web servers
     \end{itemize}
+    \vspace{2mm}
 }
 
 % 
 \cvitem{
     \cvdurationstyle{March 2020}
 }{
-    \cvtitle{Operating Systems - Process Hijacking in XINU}
+  \cvtitle{Process Hijacking in XINU (Operating Systems)}
 
     \begin{itemize}[leftmargin=*]
         \item Manipulated a victim process by locating and modifying return addresses and local variables in the runtime stack
         \item Learned about protection against this sort of attack (stack canaries)
         \item Studied how x86 interrupts, system calls, and function calls affect the runtime stack
     \end{itemize}
+    \vspace{2mm}
 }
 
 \cvitem{
-    \cvdurationstyle{Sept. 2019 - Oct. 2019}
+    \cvdurationstyle{Sept. 2019 -- Oct. 2019}
 }{
-    \cvtitle{Systems Programming - Shell Interpreter in C}
+  \cvtitle{Shell Interpreter in C (Systems Programming)}
 
     \begin{itemize}[leftmargin=*]
         \item Parsing and execution of commands
-        \item File Redirection and Piping
-        \item Signal Handling and Inter-process communication
-        \item Forking subshell execution
+        \item File redirection and piping
+        \item Signal handling and inter-process communication
+        \item Subshell execution via forking
     \end{itemize}
 }
 
