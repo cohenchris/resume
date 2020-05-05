@@ -78,7 +78,7 @@
 \color{cvmaincolor}
 
 % styles
-\newcommand{\cvnamestyle}[1]{{\Large\cvnamefont\textcolor{cvnamecolor}{#1}}}
+\newcommand{\cvnamestyle}[1]{{\Huge\cvnamefont\textcolor{cvnamecolor}{#1}}}
 \newcommand{\cvsectionstyle}[1]{{\normalsize\cvsectionfont\textcolor{cvsectioncolor}{#1}}}
 \newcommand{\cvtitlestyle}[1]{{\large\cvtitlefont\textcolor{cvtitlecolor}{#1}}}
 \newcommand{\cvdurationstyle}[1]{{\small\cvdurationfont\textcolor{cvdurationcolor}{#1}}}
@@ -238,36 +238,40 @@
 
 \cvpersonalinfo{
     % photo
-    \includegraphics[height=36mm]{img/me.png}
+    \includegraphics[height=47mm]{img/me.png}
 }{
     % name
     \cvname{Chris Cohen}
 
     % address
-    \cvpersonalinfolinewithicon{height=4mm}{img/location.eps}{
+    \cvpersonalinfolinewithicon{height=4mm}{img/location.png}{
         20 Littleton Street, Apt. 12, West Lafayette, IN 47906
     }
 
     % phone number
-    \cvpersonalinfolinewithicon{height=4mm, width=4mm}{img/phone.eps}{
+    \cvpersonalinfolinewithicon{height=4mm, width=4mm}{img/phone.png}{
       (636)\ 675-9358
     }
 
     % email address
-    \cvpersonalinfolinewithicon{height=4mm}{img/email.eps}{
+    \cvpersonalinfolinewithicon{height=4mm}{img/email.png}{
       chriscohen@chriscohen.dev
     }
 
     % LinkedIn account
-    \cvpersonalinfolinewithicon{height=4mm}{img/linkedin.eps}{
-      chris-cohen-purdue
+    \cvpersonalinfolinewithicon{height=4mm}{img/linkedin.png}{
+      https://www.linkedin.com/in/chris-cohen-purdue/
     }
 
     % Website
-    \cvpersonalinfolinewithicon{height=4mm}{img/globe.eps}{
+    \cvpersonalinfolinewithicon{height=4mm}{img/website.png}{
       https://www.chriscohen.dev
     }
-    GRADUATING MAY 2021
+
+    % GitHub
+    \cvpersonalinfolinewithicon{height=4mm}{img/github.png}{
+      https://github.com/cohenchris
+    }
 }
 
 % education
@@ -281,67 +285,14 @@
 }{
     \cvtitle{Bachelor of Science (Software Engineering and Cybersecurity)}
 
+    \large
     Purdue University in West Lafayette, IN
 
+    \normalsize
     \begin{itemize}[leftmargin=*]
         \item 3.83 GPA
-        \item 6x Purdue Dean's List
-        \item 5x Semester Honors
+        \item 6x Dean's List \hspace{10mm} 5x Semester Honors
     \end{itemize}
-}
-
-% skills
-% ------
-
-\cvsection{TECHNICAL SKILLS}
-
-\vspace{\cvbetweensectionandheadingextraskipamount}
-
-\cvitem{
-    \cvheadingstyle{Programming Languages}
-}{
-  C \hspace{12mm} C++ \hspace{12mm} Python \hspace{12mm} ARM/x86 Assembly \hspace{12mm} Bash \hspace{12mm} Javascript
-}
-
-% classes
-% -------
-\cvitem{
-    \cvheadingstyle{Notable Classes Taken}
-}{
-    \begin{itemize}[leftmargin=*]
-      \item CS250 Computer Architecture
-      \item CS251 Data Structures and Algorithms
-      \item CS252 Systems Programming
-      \item CS354 Operating Systems (with XINU OS)
-      \item CS422 Computer Networks
-    \end{itemize}
-}
-
-% topics
-% ------
-\cvitem{
-    \cvheadingstyle{Relevant Knowledge}
-}{
-    \begin{itemize}[leftmargin=*]
-      \item Memory Management
-        \subitem - Paging and Virtualization
-        \subitem - Cache Memory Hierarchy
-        \subitem - Runtime Stack Management
-
-      \item Systems Programming
-        \subitem - Inter-Process Communication, Concurrency/Parallelism
-
-      \item Operating Systems
-        \subitem - Process Scheduling, Synchronization
-        \subitem - Software/Hardware Interrupts and Device Management
-        \subitem - System Call Conventions (with hadware and software)
-        \subitem - Process Hijacking through the runtime stack
-
-      \item OSI/ISO Model
-        \subitem - 
-        \subitem - Assembled a robust memory allocation library and  a richly-featured shell
-        \subitem - 
-      \end{itemize}
 }
 
 % work experience
@@ -358,7 +309,7 @@
     Qualcomm, QGOV Division
 
     \begin{itemize}[leftmargin=*]
-        \item TBD...
+        \item TBD
     \end{itemize}
 }
 
@@ -373,34 +324,99 @@
     \begin{itemize}[leftmargin=*]
         \item Improved US Navy missile sustainment efforts by upgrading an existing
 natural language processing algorithm to process failure databases.
-        \item Currently hold a valid ‘secret’ level security clearance.
+        \item Held a valid ‘secret’ level security clearance given by the US Government.
     \end{itemize}
+}
+
+% skills
+% ------
+
+\cvsection{TECHNICAL SKILLS}
+
+% programming languages
+\cvitem{
+    \cvheadingstyle{Programming Languages}
+}{
+      C \hspace{12mm} C++ \hspace{12mm} Python \hspace{12mm} ARM/x86 Assembly \hspace{12mm} Bash \hspace{12mm} Javascript
+}
+
+% classes
+\cvitem{
+    \cvheadingstyle{Notable Classes Taken}
+}{
+      \begin{center}
+      Computer Architecture \hspace{10mm}
+      Data Structures and Algorithms \hspace{10mm}
+      Systems Programming
+
+      Operating Systems (with XINU OS) \hspace{10mm}
+      Computer Networks \hspace{10mm}
+      \end{center}
+}
+
+% topics
+\cvitem{
+    \cvheadingstyle{Relevant Knowledge}
+}{
+    \begin{itemize}[leftmargin=*]
+      \item Systems Programming
+        \subitem - Inter-Process Communication
+        \subitem - Concurrency and Parallelism (Semaphores, Locks, Forking, Threading)
+
+      \item Memory Management
+        \subitem - Paging and Virtualization
+        \subitem - Cache Memory Hierarchy
+        \subitem - Stack and Heap Management
+
+
+      \item Operating Systems
+        \subitem - Process Scheduling and Synchronization
+        \subitem - Software/Hardware Interrupts and Device Management with DMA
+        \subitem - System Call Conventions (with hadware and software support)
+        \subitem - Asynchronous IPC (specifically callback function handling)
+
+      \item OSI/ISO Model
+        \subitem - UDP, TCP, methods for reliable data transport
+        \subitem - IP addressing/routing, DHCP, and DNS translation
+        \subitem - ARP, MAC Addressing, Multiple-access protocols for link-layer
+        \subitem - Basic cryptography and security approaches
+      \end{itemize}
 }
 
 % education
 % ---------
 
-\cvsection{Projects}
+\cvsection{PROJECTS}
 
-\cvitem{
-    \cvdurationstyle{January 2020}
-}{
-  \cvtitle{Sudoku Solver in C++}
-
-    \begin{itemize}[leftmargin=*]
-        \item Implemented 5 algorithms that completed 40-50\% of given boards
-        \item Finished remaining boards with a brute-force backtracking algorithm
-        
-    \end{itemize}
-}
+% Honeypot
 \cvitem{
     \cvdurationstyle{April 2020}
 }{
-    \cvtitle{Web Server Honeypot}
+  \cvtitle{Web Server Honeypot (Extracurricular)}
 
     \begin{itemize}[leftmargin=*]
         \item 
-        
+    \end{itemize}
+}
+
+% 
+\cvitem{
+    \cvdurationstyle{March 2020}
+}{
+    \cvtitle{Process Hijacking}
+
+    \begin{itemize}[leftmargin=*]
+        \item 
+    \end{itemize}
+}
+
+\cvitem{
+    \cvdurationstyle{September 2019 - October 2019}
+}{
+    \cvtitle{Shell}
+
+    \begin{itemize}[leftmargin=*]
+        \item 
     \end{itemize}
 }
 
