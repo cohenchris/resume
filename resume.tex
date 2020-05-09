@@ -83,6 +83,7 @@
 \definecolor{cvheadingcolor}{HTML}{000000}
 \definecolor{cvmaincolor}{HTML}{000000}
 \definecolor{cvrulecolor}{HTML}{000000}
+\definecolor{emphasiscolor}{HTML}{4b5fa3}
 
 \color{cvmaincolor}
 
@@ -254,7 +255,7 @@
     \includegraphics[height=40mm]{img/me.png}
 }{
     % name
-    \cvname{Chris Cohen}
+    \cvname{\textcolor{emphasiscolor}{Chris Cohen}}
 
     % address
     \cvpersonalinfolinewithicon{height=4mm}{img/location.png}{
@@ -290,7 +291,7 @@
 % education
 % ---------
 
-\cvsection{\LARGE EDUCATION}
+\cvsection{\LARGE \textcolor{emphasiscolor}{EDUCATION}}
 
 % bachelor's
 \cvitem{
@@ -301,15 +302,16 @@
     \italicstyle{Purdue University}
 
     \begin{itemize}[leftmargin=*]
-        \item 3.83 GPA
-        \item 6x Dean's List, 5x Semester Honors
+      \item \large{\regularfont{\textcolor{emphasiscolor}{3.83 GPA}}}
+      \normalsize
+      \item 6x Dean's List, 5x Semester Honors
     \end{itemize}
 }
 
 % work experience
 % ---------------
 
-\cvsection{\LARGE EMPLOYMENT}
+\cvsection{\LARGE \textcolor{emphasiscolor}{EMPLOYMENT}}
 
 % Qualcomm
 \cvitem{
@@ -346,7 +348,7 @@ natural language processing algorithm to process failure databases.
 % skills
 % ------
 
-\cvsection{\LARGE EXPERTISE}
+\cvsection{\LARGE \textcolor{emphasiscolor}{EXPERTISE}}
 
 % programming languages
 \cvitem{
@@ -394,7 +396,7 @@ natural language processing algorithm to process failure databases.
 % education
 % ---------
 
-\cvsection{\LARGE PROJECTS}
+\cvsection{\LARGE \textcolor{emphasiscolor}{PROJECTS}}
 
 % Honeypot
 \cvitem{
