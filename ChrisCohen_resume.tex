@@ -311,9 +311,10 @@
 
     \normalsize
     \begin{itemize}[leftmargin=*]
-      \item Developed a feature to create a device-unique, secure, verifiable boot certificate chain (BCC),
+      \item Developed a ROM-backed feature which creates a device-unique, secure, verifiable boot certificate chain (BCC),
             which attests to the exact state of hardware and software running on the device.
-        \item Took full ownership over creating the BCC library, which will be stamped in ROM on an upcoming Qualcomm chipset, and ended up being over 2,500 lines.
+      \item Took full ownership over creating the BCC library, which has been stamped on the Qualcomm Snapdragon SM8650, and 5+ upcoming mobile and automotive chips. The library spans multiple execution environments, including 2,500+ lines of ROM code, and 2,000+ lines of code in other locations.
+      \item Worked with internal DRM team to use BCC for to create a new generation of our Remote Key Provisioning feature. This allows for a variety of use-cases, including, including remote provisioning of a device as it leaves the factory, secure video playback, and remote device attestation for customers.
     \end{itemize}
     \vspace{1mm}
 }
@@ -330,7 +331,6 @@
     \begin{itemize}[leftmargin=*]
         \item Developed an Android app for a Qualcomm chipset feature that ensures secure wireless connection,
           communicating information about malicious access points to the user.
-        \item Innovated an AI-powered system that processes media from non-AI devices, and plots important objects onto a map.
     \end{itemize}
     \vspace{1mm}
 }
@@ -348,7 +348,6 @@
     \begin{itemize}[leftmargin=*]
         \item Improved US Navy missile sustainment efforts by upgrading an existing
 natural language processing algorithm to process failure databases.
-        \item Held a valid ‘secret’ level security clearance given by the US Government.
     \end{itemize}
 }
 
@@ -366,6 +365,16 @@ natural language processing algorithm to process failure databases.
 }
 
 % topics
+\cvitem{
+    \cvheadingstyle{Security Clearance}
+}{
+    \begin{itemize}[leftmargin=*]
+      \item Currently hold a valid Secret level security clearance.
+      \item Approved for a valid Top Secret security clearance. I was granted this clearance, but it has lapsed - I voluntarily moved from Qualcomm's government division to its corporate division for cryptography work.
+    \end{itemize}
+  \vspace{1.5mm}
+}
+
 \cvitem{
     \cvheadingstyle{Memory Management}
 }{
