@@ -311,10 +311,9 @@
 
     \normalsize
     \begin{itemize}[leftmargin=*]
-      \item Developed a ROM-backed feature which creates a device-unique, secure, verifiable boot certificate chain (BCC),
-            which attests to the exact state of hardware and software running on the device.
-      \item Took full ownership over creating the BCC library, which has been stamped on the Qualcomm Snapdragon SM8650, and 5+ upcoming mobile and automotive chips. The library spans multiple execution environments, including 2,500+ lines of ROM code, and 2,000+ lines of code in other locations.
-      \item Worked with internal DRM team to use BCC for to create a new generation of our Remote Key Provisioning feature. This allows for a variety of use-cases, including, including remote provisioning of a device as it leaves the factory, secure video playback, and remote device attestation for customers.
+      \item Developed a ROM-backed feature which creates a device-unique, verifiable boot certificate chain (BCC), which attests to the exact state of hardware and software running on the device.
+      \item Took full ownership over creating the BCC library, which has been stamped on the Qualcomm Snapdragon SM8650, and 5+ upcoming mobile and automotive chips.
+      \item Worked with internal DRM team to use BCC for a new generation of our Remote Key Provisioning feature. This allows for a variety of use-cases, including, including remote provisioning of a device as it leaves the factory, secure video playback, and remote device attestation for customers.
     \end{itemize}
     \vspace{1mm}
 }
@@ -325,29 +324,12 @@
 }{
     \cvtitle{Qualcomm, Government Division (QGOV)}
 
-    \italicstyle{Software Engineering Intern  --  Worked Remotely}
+    \italicstyle{Software Engineering Intern  --  Remote}
 
     \normalsize
     \begin{itemize}[leftmargin=*]
         \item Developed an Android app for a Qualcomm chipset feature that ensures secure wireless connection,
           communicating information about malicious access points to the user.
-    \end{itemize}
-    \vspace{1mm}
-}
-
-% NSWC Crane
-\cvitem{
-    \cvdurationstyle{May 2019 -- Aug. 2019}
-}{
-
-    \cvtitle{Naval Surface Warface Center, Crane}
-
-    \italicstyle{Software Engineering Intern  --  Crane, IN}
-
-    \normalsize
-    \begin{itemize}[leftmargin=*]
-        \item Improved US Navy missile sustainment efforts by upgrading an existing
-natural language processing algorithm to process failure databases.
     \end{itemize}
 }
 
@@ -369,8 +351,8 @@ natural language processing algorithm to process failure databases.
     \cvheadingstyle{Security Clearance}
 }{
     \begin{itemize}[leftmargin=*]
-      \item Currently hold a valid Secret level security clearance.
-      \item Approved for a valid Top Secret security clearance. I was granted this clearance, but it has lapsed - I voluntarily moved from Qualcomm's government division to its corporate division for cryptography work.
+      \item Currently hold a valid \textbf{Secret} security clearance.
+      \item Approved for a valid \textbf{Top Secret} clearance. This clearance has lapsed - I voluntarily moved from Qualcomm government to corporate for cryptography work.
     \end{itemize}
   \vspace{1.5mm}
 }
@@ -402,6 +384,7 @@ natural language processing algorithm to process failure databases.
     \cvheadingstyle{OSI/ISO 7-Layer Model}
 }{
     \begin{itemize}[leftmargin=*]
+      \item OSI/ISO 7-Layer Model
       \item TCP, UDP, HTTP
       \item IP addressing/routing, DHCP, DNS translation
       \item MAC addressing/routing, ARP
@@ -412,34 +395,20 @@ natural language processing algorithm to process failure databases.
 % education
 % ---------
 
-\cvsection{\LARGE \textcolor{emphasiscolor}{PROJECTS}}
+\cvsection{\LARGE \textcolor{emphasiscolor}{PERSONAL PROJECTS}}
 
 % Honeypot
 \cvitem{
-    \cvdurationstyle{April 2020}
+    \cvdurationstyle{April 2020 - Present}
 }{
-  \cvtitle{Web Server Honeypot (Extracurricular)}
+  \cvtitle{Home Lab}
 
     \begin{itemize}[leftmargin=*]
-        \item Hosted an HTTPS Honeypot Server to lure attackers and collect information
-        \item Automatic blacklisting for clients sending excessive requests in a short period of time
-        \item Analyzed logs and learned about different types of attacks on web servers
+        \item Achieve internal network isolation and security using a custom firewall and 5 VLANS
+        \item Host multiple open-source, privacy-focused services such as a DNS-level adblocker, email, meta-search engine, and cloud server
+        \item Automate backup of server config and personal files, following the 3-2-1 backup industry standard, allowing for a full restoration using 1 command
+        \item Continuously evaluate network architecture to follow the most bleeding-edge security practices
     \end{itemize}
-    \vspace{1mm}
-}
-
-% 
-\cvitem{
-    \cvdurationstyle{March 2020}
-}{
-  \cvtitle{Process Hijacking in XINU (Operating Systems)}
-
-    \begin{itemize}[leftmargin=*]
-        \item Manipulated a victim process by locating and modifying return addresses and local variables in the runtime stack
-        \item Learned about protection against this sort of attack (i.e. stack canaries)
-        \item Studied how x86 interrupts, system calls, and function calls affect the runtime stack
-    \end{itemize}
-    \vspace{1mm}
 }
 
 \end{document}
