@@ -4,5 +4,5 @@
 rm -f ChrisCohen_resume.webp
 pdftoppm ChrisCohen_resume.pdf ChrisCohen_resume -png -singlefile
 
-cwebp ChrisCohen_resume.png -o ChrisCohen_resume.webp -q 50
+cwebp ChrisCohen_resume.png -o ChrisCohen_resume.webp -q 80
 rm -f ChrisCohen_resume.png
