@@ -101,11 +101,13 @@
 
 % vertical space after personal info and standard CV items
 \newlength{\cvafteritemskipamount}
-\setlength{\cvafteritemskipamount}{6mm plus 1.25mm minus 1.25mm}
+\setlength{\cvafteritemskipamount}{0mm plus 1.25mm minus 1.25mm}
 
 % vertical space after sections
 \newlength{\cvaftersectionskipamount}
 \setlength{\cvaftersectionskipamount}{4mm plus 0.5mm minus 0.5mm}
+\newlength{\cvbeforesectionskipamount}
+\setlength{\cvbeforesectionskipamount}{5mm plus 0.5mm minus 0.5mm}
 
 % extra vertical space to be used when a section starts with an item with a heading (e.g. in the skills section),
 % so that the heading does not follow the section name too closely
@@ -189,6 +191,8 @@
 % appropriate vertical space after
 % @param #1 left column content (should be the section name)
 \newcommand{\cvsection}[1]{
+    \vspace{\cvbeforesectionskipamount}
+
     % left and right column
     \begin{minipage}[t]{\cvleftcolumnwidth}
         \raggedleft\cvsectionstyle{#1}
@@ -314,10 +318,12 @@
       \item Took full ownership over creating the BCC library, which has been stamped on the Qualcomm Snapdragon SM8650, and 5+ upcoming mobile and automotive chips.
       \item Worked with internal DRM team to use BCC for a new generation of our Remote Key Provisioning feature.
         \begin{itemize}
-          \item This allows for a variety of use-cases, including, including remote provisioning of a device as it leaves the factory, secure video playback, and remote device attestation for customers.
+          \item This allows for a variety of use-cases, including remote provisioning of a device as it leaves the factory, secure video playback, and remote device attestation for customers.
         \end{itemize}
     \end{itemize}
 }
+
+\vspace{6mm}
 
 % Qualcomm Internship
 \cvitem{
@@ -346,6 +352,8 @@
   C \hspace{12mm} C++ \hspace{12mm} Python \hspace{12mm} ARM/x86 Assembly \hspace{12mm} Bash \hspace{12mm} Javascript
 }
 
+\vspace{6mm}
+
 % topics
 \cvitem{
     \cvdurationstyle{Security Clearance}
@@ -373,6 +381,8 @@
         \item Automate backup of server config and personal files, following the 3-2-1 backup industry standard, allowing for a full restoration using 1 command.
     \end{itemize}
 }
+
+\vspace{6mm}
 
 % Cello
 \cvitem{
