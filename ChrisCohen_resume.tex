@@ -105,7 +105,7 @@
 
 % vertical space after sections
 \newlength{\cvaftersectionskipamount}
-\setlength{\cvaftersectionskipamount}{4mm plus 0.5mm minus 0.5mm}
+\setlength{\cvaftersectionskipamount}{5mm plus 0.5mm minus 0.5mm}
 \newlength{\cvbeforesectionskipamount}
 \setlength{\cvbeforesectionskipamount}{5mm plus 0.5mm minus 0.5mm}
 
@@ -191,6 +191,7 @@
 % appropriate vertical space after
 % @param #1 left column content (should be the section name)
 \newcommand{\cvsection}[1]{
+    % space before
     \vspace{\cvbeforesectionskipamount}
 
     % left and right column
